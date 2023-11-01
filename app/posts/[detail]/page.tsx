@@ -30,7 +30,7 @@ export default function Page({ params }: { params: { detail: string } }) {
     return (
         <div>
             {data.map(item => (
-                <p>{item.title}</p>
+                <p key={item.id}>{item.title}</p>
             ))}
         </div>
     )
