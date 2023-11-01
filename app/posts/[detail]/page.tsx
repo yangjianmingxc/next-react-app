@@ -25,12 +25,15 @@ export default function Page({ params }: { params: { detail: string } }) {
         fetchData()
         console.log('router :>> ', router)
         console.log('object :>> ', params)
-        console.log('pathname :>> ', pathname);
+        console.log('pathname :>> ', pathname)
     }, [])
     return (
         <div>
             {data.map(item => (
-                <p key={item.id}>{item.title}</p>
+                <div key={item.id}>
+                    <p>{item.title}</p>
+                    <div>{item.body}</div>
+                </div>
             ))}
         </div>
     )
